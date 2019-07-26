@@ -4,6 +4,8 @@ export class QuestionBase<T> {
   value: T;
   key: string;
   label: string;
+  type?: string;
+  options?: Array<any>;
   required: boolean;
   order: number;
   controlType: string;
