@@ -13,4 +13,9 @@ export class AppComponent {
   constructor(private serv: QuestionService) {
     this.questions = serv.getQuestions();
   }
+  peticion(arg) {
+    console.log('PETICION====');
+    console.log(arg);
+    console.log('PETICION====');
+  }
 }

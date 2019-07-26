@@ -19,7 +19,7 @@
 </ul> -->
 <div class="col-12">
   <h2>Job Application for Heroes</h2>
-  <app-dynamic-form [questions]="questions"></app-dynamic-form>
+  <app-dynamic-form [questions]="questions" (save)="peticion($event)"></app-dynamic-form>
 </div>
 
 <router-outlet></router-outlet>
