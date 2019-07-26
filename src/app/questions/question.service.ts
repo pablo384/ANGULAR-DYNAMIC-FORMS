@@ -25,28 +25,33 @@ export class QuestionService {
           { key: 'good', value: 'Good' },
           { key: 'unproven', value: 'Unproven' }
         ],
-        order: 3
+        order: 3,
+        show: true
       }),
 
       new TextboxQuestion({
-        key: 'name',
+        key: 'id',
         label: 'Primer Nombre',
+        value: 5,
+        type: '',
+        required: true,
+        order: 1,
+        show: false
+      }),
+      new TextboxQuestion({
+        key: 'surname',
+        label: 'Primer Apellido',
         value: '',
         required: true,
-        order: 1
+        order: 1,
+        show: true
       }),
-      // new TextboxQuestion({
-      //   key: 'surname',
-      //   label: 'Primer Apellido',
-      //   value: '',
-      //   required: true,
-      //   order: 1
-      // }),
       new CheckboxQuestion({
         key: 'work',
         label: 'Trabaja?',
         value: '',
-        order: 5
+        order: 5,
+        show: true
       }),
 
       new TextboxQuestion({
@@ -54,6 +59,7 @@ export class QuestionService {
         label: 'Email',
         type: 'email',
         order: 2,
+        show: true,
         validators: [Validators.email]
       })
     ];

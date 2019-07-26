@@ -1,6 +1,6 @@
 <div
   [formGroup]="form"
-  *ngIf="question.controlType != 'checkbox'"
+  *ngIf="question.controlType != 'checkbox' && question.show"
   class="text-left m-1"
 >
   <label [attr.for]="question.key" class="w-25">
@@ -40,7 +40,7 @@
 <!-- checkbox -->
 <div
   [formGroup]="form"
-  *ngIf="question.controlType == 'checkbox'"
+  *ngIf="question.controlType == 'checkbox' && question.show"
   class="custom-control custom-switch"
 >
   <input

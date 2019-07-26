@@ -18,4 +18,9 @@ export class AppComponent {
     console.log(arg);
     console.log('PETICION====');
   }
+  cambiar() {
+    // console.log(this.questions[2]);
+    this.questions[2].show = !this.questions[2].show;
+    // console.log(this.questions[2]);
+  }
 }
