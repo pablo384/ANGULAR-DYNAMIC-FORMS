@@ -30,26 +30,26 @@ export class QuestionService {
       }),
 
       new TextboxQuestion({
-        key: 'id',
+        key: 'name',
         label: 'Primer Nombre',
-        value: 5,
+        value: '5',
         type: '',
         required: true,
         order: 1,
-        show: false
+        show: true
       }),
       new TextboxQuestion({
         key: 'surname',
         label: 'Primer Apellido',
         value: '',
         required: true,
-        order: 1,
+        order: 4,
         show: true
       }),
       new CheckboxQuestion({
-        key: 'work',
+        key: 'work123',
         label: 'Trabaja?',
-        value: '',
+        value: true,
         order: 5,
         show: true
       }),

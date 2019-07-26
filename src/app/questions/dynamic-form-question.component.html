@@ -43,14 +43,13 @@
   *ngIf="question.controlType == 'checkbox' && question.show"
   class="custom-control custom-switch"
 >
-  <input
-    [type]="question.type"
-    class="custom-control-input"
+  <mdb-checkbox 
+  [formControlName]="question.key"
     [id]="question.key"
-  />
-  <label class="custom-control-label" [attr.for]="question.key">{{
+  [checked]="question.value" 
+  >{{
     question.label
-  }}</label>
+  }}</mdb-checkbox>
 
   <div class="errorMessage text-danger text-center" *ngIf="!isValid">
     {{ question.label }} no valido

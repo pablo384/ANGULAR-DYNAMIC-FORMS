@@ -32,8 +32,8 @@ export class QuestionBase<T> {
     this.order = options.order === undefined ? 1 : options.order;
     this.controlType = options.controlType || '';
     this.validators = options.validators || [];
-    console.log('padre::', this.validators);
-    console.log('opt::', options);
-    console.log('val::', options.validators);
+    // console.log('padre::', this.validators);
+    // console.log('opt::', options);
+    // console.log('val::', options.validators);
   }
 }
