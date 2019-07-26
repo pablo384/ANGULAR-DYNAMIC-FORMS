@@ -1,0 +1,58 @@
+<div
+  [formGroup]="form"
+  *ngIf="question.controlType != 'checkbox'"
+  class="text-left m-1"
+>
+  <label [attr.for]="question.key" class="w-25">
+    <span *ngIf="question.required" class="text-danger"> *</span>
+    {{ question.label }}</label
+  >
+
+  <span
+    [ngSwitch]="question.controlType"
+    [class]="question.controlType + ' w-75'"
+    style="display: inline-block;"
+  >
+    <input
+      *ngSwitchCase="'textbox'"
+      [formControlName]="question.key"
+      [id]="question.key"
+      [type]="question.type"
+      class="form-control {{ question.type }} "
+    />
+
+    <select
+      [id]="question.key"
+      *ngSwitchCase="'dropdown'"
+      [formControlName]="question.key"
+      class=" {{ question.type }} browser-default custom-select"
+    >
+      <option *ngFor="let opt of question.options" [value]="opt.key">{{
+        opt.value
+      }}</option>
+    </select>
+  </span>
+
+  <div class="errorMessage text-danger text-center" *ngIf="!isValid">
+    {{ question.label }} no valido
+  </div>
+</div>
+<!-- checkbox -->
+<div
+  [formGroup]="form"
+  *ngIf="question.controlType == 'checkbox'"
+  class="custom-control custom-switch"
+>
+  <input
+    [type]="question.type"
+    class="custom-control-input"
+    [id]="question.key"
+  />
+  <label class="custom-control-label" [attr.for]="question.key">{{
+    question.label
+  }}</label>
+
+  <div class="errorMessage text-danger text-center" *ngIf="!isValid">
+    {{ question.label }} no valido
+  </div>
+</div>

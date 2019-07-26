@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { QuestionService } from './questions/question.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pruebasForms';
+  questions = [];
+
+  constructor(private serv: QuestionService) {
+    this.questions = serv.getQuestions();
+  }
 }
